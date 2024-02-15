@@ -6,4 +6,10 @@ router.get('/search', (req, res) => {
 })
 
 
+
+router.get('/create', (req, res) => {
+    res.render('electronic/create')
+})
+
+
 module.exports = router
