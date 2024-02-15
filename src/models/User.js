@@ -17,7 +17,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Password is required'],
         minLength: [4, "Password should be at least 4 characters"]
-    }
+    },
+    createdElectronics: [{
+        type: mongoose.Types.ObjectId,
+        ref: "Electronic"
+    }]
 });
 
 userSchema.pre('save', async function(){
