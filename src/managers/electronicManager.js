@@ -14,3 +14,5 @@ exports.create = (userId, electronicData) => {
 
 
 exports.getAll = () => Electronic.find()
+exports.getOne = (electronicId) => Electronic.findById(electronicId)
+exports.getOneWithDetails = (electronicId) => this.getOne(electronicId).populate('owner')
