@@ -1,14 +1,14 @@
-const authRouter = require("express").Router()
+const router = require("express").Router()
 
-authRouter.get('/register', (req, res) => {
+router.get('/register', (req, res) => {
     res.render('auth/register')
 })
 
 
 
 
-authRouter.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
     res.render('auth/login')
 })
 
-module.exports = authRouter
+module.exports = router

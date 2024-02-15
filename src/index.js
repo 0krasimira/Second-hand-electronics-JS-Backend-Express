@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 
 const handlebarsConfigurator = require("./config/handlebarsConfigurator")
 const app = express()
-const router = require("./controllers/homeController")
+const router = require("./routes")
 // const movieRouter = require("./controllers/movieController")
 // const castRouter = require("./controllers/castController")
 const userController = require("./controllers/userController")
@@ -19,7 +19,7 @@ handlebarsConfigurator(app)
 const PORT = 3000
     
 app.use(router)
-// app.use(movieRouter)
+
 // app.use("/cast", castRouter)
 app.use('/auth', userController)
 
