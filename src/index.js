@@ -7,7 +7,7 @@ const app = express()
 const router = require("./controllers/homeController")
 // const movieRouter = require("./controllers/movieController")
 // const castRouter = require("./controllers/castController")
-// const authRouter = require("./controllers/authController")
+const userController = require("./controllers/userController")
 
 
 
@@ -21,7 +21,7 @@ const PORT = 3000
 app.use(router)
 // app.use(movieRouter)
 // app.use("/cast", castRouter)
-// app.use('/auth', authRouter)
+app.use('/auth', userController)
 
 mongoose.connect("mongodb://127.0.0.1:27017/secondHand-electronics").then(() => {console.log("DB connected succesfully.");
 app.listen(PORT, () => 
