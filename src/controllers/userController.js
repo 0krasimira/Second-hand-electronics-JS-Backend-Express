@@ -22,4 +22,17 @@ router.get('/login', (req, res) => {
     res.render('auth/login')
 })
 
+router.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+    try{
+        const token = await userManager.login(email, password);
+        res.cookie('auth', token);
+        res.redirect('/');
+    }catch(error){
+        const message = getErrorMessage(error)
+        res.status(404).render('auth/login', {email, error: message})
+    }
+    
+});
+
 module.exports = router
