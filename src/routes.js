@@ -8,7 +8,6 @@ const electronicController = require('./controllers/electronicsController')
 
 router.use(homeController)
 router.use(electronicController)
-// router.use('/cast', castController)
 router.use('/auth', userController)
 
 router.get('*', (req,res) => {
