@@ -45,3 +45,5 @@ exports.login = async (email, password) => {
     // return token
     return token;
 }
+
+exports.findUserById = () => User.findById()

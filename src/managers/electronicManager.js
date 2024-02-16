@@ -19,3 +19,4 @@ exports.getOne = (electronicId) => Electronic.findById(electronicId)
 exports.getOneWithDetails = (electronicId) => this.getOne(electronicId).populate('owner')
 
 exports.edit = (electronicId, electronicData) => Electronic.findByIdAndUpdate(electronicId, electronicData, { runValidators: true })
+exports.delete = (electronicId) => Electronic.findByIdAndDelete(electronicId)

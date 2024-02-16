@@ -18,15 +18,17 @@
                 <div class="buttons">
                     
                     <!--If user is not owner of the toy post-->
-                    <a href="#" class="buy-btn">Buy</a>
+                    
 
                     {{#if isOwner}}
                     <a href="/{{electronic._id}}/edit" class="edit-btn">Edit</a>
                     <a href="/{{electronic._id}}/delete" class="delete-btn">Delete</a>
-                    {{/if}}
+                    {{else}}
+                    <a href="/{{electronic._id}}/buy" class="buy-btn">Buy</a>
                     <!--If user is not the owner and is bought this toy-->
                     <p><span class="buy">Thank You For Your Purchase</span></p>
                     
+                    {{/if}}
                     {{/if}}
                 </div>
             </div>

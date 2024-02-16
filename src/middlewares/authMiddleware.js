@@ -40,3 +40,10 @@ exports.isGuest = (req, res, next) => {
 
     next()
 }
+
+exports.aisOwner = async (req, res, next) => {
+    const electronic = await electronicManager.getOne
+
+    next()
+}
+
